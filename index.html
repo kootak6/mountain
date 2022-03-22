@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮賀岳特設サイト</title>
+    <link rel="stylesheet" href="css/html5reset-1.6.1.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="js/jquery-3.1.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&family=Shippori+Mincho:wght@400;700&family=Taviraj:wght@600&display=swap" rel="stylesheet">
+<script type="text/javascript">
+    
+    // 設定開始（スクロールの動きを設定してください）
+    
+    var speed = 41; // スクロールのスピード（1に近いほど速く）
+    var move = -2; // スクロールのなめらかさ（1に近いほどなめらかに）
+    
+    // 設定終了
+    
+    
+    // 初期化
+    var x = 0;
+    var y = 0;
+    var nx = 0;
+    var ny = 0;
+    
+    function scroll(){
+    
+        window.scrollBy( 0 , move ); // スクロール処理
+    
+        var rep = setTimeout("scroll()", speed);
+    
+        // スクロール位置をチェック（IE用）
+        if(document.all){
+    
+            x = document.body.scrollLeft;
+            y = document.body.scrollTop;
+    
+        }
+        // スクロール位置をチェック（NN用）
+        else if(document.layers || document.getElementById){
+    
+            x = pageXOffset;
+            y = pageYOffset;
+    
+        }
+    
+    
+    }
+    
+    // -->
+    </script>
+</head>
+<body onLoad="scroll()">
+    <header class="content">
+        <div class="head">
+        <h1>浮賀岳</h1>
+    
+        <ul>
+            <li><a href="#">お知らせ</a></li>
+            <li><a href="#">フォト</a></li>
+            <li><a href="#">山荘</a></li>
+            <li><a href="#">アクセス</a></li>
+        </ul>
+
+        <p class="headtext">Would you like to go climbing Ukukatake?</p>
+    </div>
+    </header>
+
+    <main>
+        <div class="mainone">
+        <p>大自然に挑戦してみませんか。
+            普段感じることのない生命の力、大自然の偉大さに触れてみませんか。
+            初めての登山、あの時の感動と達成感をもう一度。
+            初心者の方は感じたことのない喜びをぜひ。
+        </p>
+        <p class="mainoneeng">A Challenge to Nature</p>
+        <div class="yamasen"><img src="../htdocs/image/yamasen.png"></div>
+        </div>
+        <div class="maintwo content">
+            <div class="maintwotext">
+        <p>非日常を日常に。
+            通勤は電車、会社ではパソコンとにらめっこ、帰ったらスマホを見て寝るだけ。
+            そんな日常を吹き飛ばす大自然の豊かさがここにはあります。
+            毎日表情を変える自然たちがあなたを出迎えてくれるでしょう。
+        </p>
+        <p class="maintwoeng">Forget daily life</p>
+        </div>
+    </div>
+
+        <div class="mainthree"> 
+        <h2>ACCESS</h2>
+        <div class="tizu"><img src="../htdocs/image/tizu.png"></div>
+        <div class="rosenzu"><img src="image/rosenzu2.png"></div>
+        <p class="button"><a href="#">時刻表はこちら →</a></p>
+        </div>  
+
+        <div class="mainend content"></div>
+    </main>
+
+    <footer>
+        <p><small> &copy; Koooziiii.works.</small></p>
+    </footer>
+    
+
+    <title>TAG index Webサイト</title>
+
+</body>
+</html>
